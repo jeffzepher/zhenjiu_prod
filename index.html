@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
     <title>针灸推拿学·云题库</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+	<script src="config.js"></script>
     <style>
         * {
             box-sizing: border-box;
@@ -505,9 +506,11 @@
 <script>
     // ==================== Supabase 配置 ====================
     // 请替换为您的 Supabase 项目 URL 和 anon key
-    const SUPABASE_URL = 'https://woimziponrsxkgrdqasa.supabase.co';
-    const SUPABASE_ANON_KEY = 'sb_publishable_aHK3etRyH_8k1vNQGdRUcg_v7-vTUwf';
-    
+    // const SUPABASE_URL = 'https://woimziponrsxkgrdqasa.supabase.co';
+    // const SUPABASE_ANON_KEY = 'sb_publishable_aHK3etRyH_8k1vNQGdRUcg_v7-vTUwf';
+	const SUPABASE_URL = window.APP_CONFIG.SUPABASE_URL;
+    const SUPABASE_ANON_KEY = window.APP_CONFIG.SUPABASE_ANON_KEY;
+
     let supabaseClient = null;
     let currentUser = null;
     
